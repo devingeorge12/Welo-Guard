@@ -1,0 +1,31 @@
+// Shared padding token (optional abstraction)
+const BASE_PADDING = "p-5";
+
+// Modal.tsx
+export const VaultSetupModal = () => {
+  return (
+    <div className={`bg-white rounded-md shadow-lg ${BASE_PADDING}`}>
+      <h2 className="text-xl font-bold mb-4">Set Up Your Vault</h2>
+      <input className="border w-full px-4 py-2" placeholder="Vault Name" />
+    </div>
+  );
+};
+
+// DashboardCard.tsx
+export const VaultStatsCard = () => {
+  return (
+    <div className={`bg-gray-50 border rounded ${BASE_PADDING}`}>
+      <h3 className="text-lg font-semibold">Vault Activity</h3>
+      <p>Last synced: 2 hours ago</p>
+    </div>
+  );
+};
+
+// SidebarNav.tsx
+export const SidebarItem = ({ label }: { label: string }) => {
+  return (
+    <li className="px-5 py-2 hover:bg-gray-200 rounded">  {/* standardized */}
+      {label}
+    </li>
+  );
+};
